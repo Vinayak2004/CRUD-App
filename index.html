@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Crud</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+    crossorigin="anonymous"
+  />
+
+  <!-- CSS Styles -->
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    @media (max-width: 576px) {
+      .form-group {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="mt-5 mb-5">CRUD Application with Local Storage</h2>
+    <div class="mb-5">
+      <div class="row">
+        <div class="form-group col-md-6 mb-3">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="name"
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label for="age">Age</label>
+          <input
+            type="number"
+            name="age"
+            class="form-control"
+            id="age"
+            placeholder="Enter Age"
+          />
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            name="address"
+            class="form-control"
+            id="address"
+            placeholder="Enter Address"
+          />
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter Email"
+          />
+        </div>
+
+        <div class="col-lg-12 mt-5">
+          <button class="btn btn-success" id="submit" onclick="AddData()">Add Data</button>
+          <button class="btn btn-primary d-none" id="update">Update</button>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="mb-3">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="filterName">Filter by Name:</label>
+              <input type="text" id="filterName" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="filterAge">Filter by Age:</label>
+              <input type="number" id="filterAge" class="form-control" />
+            </div>
+            <div class="col-md-4">
+              <label for="filterAddress">Filter by Address:</label>
+              <input type="text" id="filterAddress" class="form-control" />
+            </div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="sortOption">Sort by:</label>
+          <select id="sortOption" class="form-select">
+            <option value="nameAsc">Name (Ascending)</option>
+            <option value="nameDesc">Name (Descending)</option>
+            <option value="ageAsc">Age (Ascending)</option>
+            <option value="ageDesc">Age (Descending)</option>
+            <option value="addressAsc">Address (Ascending)</option>
+            <option value="addressDesc">Address (Descending)</option>
+          </select>
+        </div>
+        <table class="table table-bordered" id="crudTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Address</th>
+              <th>Email</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+        <nav>
+          <ul class="pagination justify-content-center" id="pagination"></ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+

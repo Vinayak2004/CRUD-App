@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .btn-success {
+    margin-right: 10px;
+  }
+  
+  #filterName,
+  #filterAge,
+  #filterAddress,
+  #sortOption {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  #crudTable {
+    margin-top: 30px;
+  }
+  
+  #crudTable th,
+  #crudTable td {
+    padding: 10px;
+  }
+  
+  #crudTable th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  #crudTable td {
+    background-color: #fff;
+  }
+  
+  .btn-danger,
+  .btn-warning {
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+  }
+  
+  .m-2 {
+    margin-right: 5px;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    #crudTable {
+      font-size: 12px;
+    }
+  
+    #crudTable th,
+    #crudTable td {
+      padding: 6px;
+    }
+  }
+  
+  
+  
