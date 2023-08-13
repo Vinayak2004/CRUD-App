@@ -16,17 +16,7 @@
   />
 
   <!-- CSS Styles -->
-  <style>
-    body {
-      padding: 20px;
-    }
-
-    @media (max-width: 576px) {
-      .form-group {
-        margin-bottom: 10px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -76,8 +66,9 @@
 
         <div class="col-lg-12 mt-5">
           <button class="btn btn-success" id="submit" onclick="AddData()">Add Data</button>
-          <button class="btn btn-primary d-none" id="update">Update</button>
+          <button class="btn btn-primary" id="update" style="display: none;">Update</button>
         </div>
+        
       </div>
     </div>
     <hr />
@@ -134,4 +125,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
